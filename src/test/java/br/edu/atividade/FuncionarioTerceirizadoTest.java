@@ -8,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FuncionarioTerceirizadoTest {
 
     @Test
+    @DisplayName("Teste de get de nome")
     void getNome() {
         // Arrange
         FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
@@ -18,6 +19,7 @@ class FuncionarioTerceirizadoTest {
     }
 
     @Test
+    @DisplayName("Teste de set de nome")
     void setNome() {
         // Arrange
         FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
@@ -28,6 +30,7 @@ class FuncionarioTerceirizadoTest {
     }
 
     @Test
+    @DisplayName("Teste de get de horas trabalhadas")
     void getHorasTrabalhadas() {
         // Arrange
         FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
@@ -38,6 +41,7 @@ class FuncionarioTerceirizadoTest {
     }
 
     @Test
+    @DisplayName("Teste de set de horas trabalhadas")
     void setHorasTrabalhadas() {
         // Arrange
         FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
@@ -48,6 +52,7 @@ class FuncionarioTerceirizadoTest {
     }
 
     @Test
+    @DisplayName("Teste de get de despesas adicionais")
     void getDespesasAdicionais() {
         // Arrange
         FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
@@ -58,6 +63,7 @@ class FuncionarioTerceirizadoTest {
     }
 
     @Test
+    @DisplayName("Teste de set de despesas adicionais")
     void setDespesasAdicionais() {
         // Arrange
         FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
