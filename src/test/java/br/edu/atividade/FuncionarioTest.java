@@ -56,7 +56,7 @@ class FuncionarioTest {
         {
             // Arrange
             Funcionario funcionario = new Funcionario("Fulano", 160);
-            double valorHoraTrabalhada = 40;
+            double valorHoraTrabalhada = 52.80;
             // Act
             double horasTrabalhadas = funcionario.getHorasTrabalhadas();
             double pagamento = funcionario.getHorasTrabalhadas() * valorHoraTrabalhada;
