@@ -11,7 +11,7 @@ class FuncionarioTerceirizadoTest {
     @DisplayName("Teste de get de nome")
     void getNome() {
         // Arrange
-        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
+        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 58.00, 1000);
         // Act
         String nome = funcionario.getNome();
         // Assert
@@ -22,7 +22,8 @@ class FuncionarioTerceirizadoTest {
     @DisplayName("Teste de set de nome")
     void setNome() {
         // Arrange
-        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
+        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 58.00, 1000);
+
         // Act
         funcionario.setNome("Ciclano");
         // Assert
@@ -33,7 +34,8 @@ class FuncionarioTerceirizadoTest {
     @DisplayName("Teste de get de horas trabalhadas")
     void getHorasTrabalhadas() {
         // Arrange
-        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
+        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 58.00, 1000);
+
         // Act
         int horasTrabalhadas = funcionario.getHorasTrabalhadas();
         // Assert
@@ -44,7 +46,8 @@ class FuncionarioTerceirizadoTest {
     @DisplayName("Teste de set de horas trabalhadas")
     void setHorasTrabalhadas() {
         // Arrange
-        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
+        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 58.00, 1000);
+
         // Act
         funcionario.setHorasTrabalhadas(20);
         // Assert
@@ -55,18 +58,20 @@ class FuncionarioTerceirizadoTest {
     @DisplayName("Teste de get de despesas adicionais")
     void getDespesasAdicionais() {
         // Arrange
-        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
+        FuncionarioTerceirizado terceirizado = new FuncionarioTerceirizado("Fulano", 10, 58.00, 1000);
+
         // Act
-        double despesasAdicionais = funcionario.getDespesasAdicionais();
+        double despesasAdicionais = terceirizado.getDespesasAdicionais();
         // Assert
-        assertEquals(100, despesasAdicionais);
+        assertEquals(1000, despesasAdicionais);
     }
 
     @Test
     @DisplayName("Teste de set de despesas adicionais")
     void setDespesasAdicionais() {
         // Arrange
-        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 100);
+        FuncionarioTerceirizado funcionario = new FuncionarioTerceirizado("Fulano", 10, 58.00, 1000);
+
         // Act
         funcionario.setDespesasAdicionais(200);
         // Assert
@@ -78,7 +83,7 @@ class FuncionarioTerceirizadoTest {
     void calcularPagamento() {
         {
             // Arrange
-            FuncionarioTerceirizado terceirizado = new FuncionarioTerceirizado("Fulano", 160, 100);
+            FuncionarioTerceirizado terceirizado = new FuncionarioTerceirizado("Fulano", 160, 58.00, 1000);
             double valorHoraTrabalhada = 52.80;
             double despesasAdicionais = terceirizado.getDespesasAdicionais();
             // Act

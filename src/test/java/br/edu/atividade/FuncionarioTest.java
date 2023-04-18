@@ -11,7 +11,7 @@ class FuncionarioTest {
     @DisplayName("Teste de get de nome")
     void getNome() {
         // Arrange
-        Funcionario funcionario = new Funcionario("Fulano", 10);
+        Funcionario funcionario = new Funcionario("Fulano", 10, 58.00);
         // Act
         String nome = funcionario.getNome();
         // Assert
@@ -22,7 +22,7 @@ class FuncionarioTest {
     @DisplayName("Teste de set de nome")
     void setNome() {
         // Arrange
-        Funcionario funcionario = new Funcionario("Fulano", 10);
+        Funcionario funcionario = new Funcionario("Fulano", 10, 58.00);
         // Act
         funcionario.setNome("Ciclano");
         // Assert
@@ -33,7 +33,7 @@ class FuncionarioTest {
     @DisplayName("Teste de get de horas trabalhadas")
     void getHorasTrabalhadas() {
         // Arrange
-        Funcionario funcionario = new Funcionario("Fulano", 10);
+        Funcionario funcionario = new Funcionario("Fulano", 10, 58.00);
         // Act
         int horasTrabalhadas = funcionario.getHorasTrabalhadas();
         // Assert
@@ -44,7 +44,7 @@ class FuncionarioTest {
     @DisplayName("Teste de set de horas trabalhadas")
     void setHorasTrabalhadas() {
         // Arrange
-        Funcionario funcionario = new Funcionario("Fulano", 10);
+        Funcionario funcionario = new Funcionario("Fulano", 10, 58.00);
         // Act
         funcionario.setHorasTrabalhadas(20);
         // Assert
@@ -55,11 +55,11 @@ class FuncionarioTest {
     void calcularPagamento() {
         {
             // Arrange
-            Funcionario funcionario = new Funcionario("Fulano", 160);
-            double valorHoraTrabalhada = 52.80;
+            Funcionario funcionario = new Funcionario("Fulano", 160, 58.00 );
+//            double valorHoraTrabalhada = 52.80;
             // Act
             double horasTrabalhadas = funcionario.getHorasTrabalhadas();
-            double pagamento = funcionario.getHorasTrabalhadas() * valorHoraTrabalhada;
+            double pagamento = funcionario.getHorasTrabalhadas() * funcionario.getValorHora();
             // Assert
             assertTrue(pagamento >= 1320, "Pagamento deve ser maior que 1320");
             assertTrue(horasTrabalhadas <= 160, "Horas trabalhadas superior ao limite de 160 horas mensais.");
